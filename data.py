@@ -184,7 +184,7 @@ for i in range(len(friends)):
     data[friends[i]] = {}
     try:
         rr = getData("user.rating", friends[i], friends[i])["result"]
-        time.sleep(2)
+        # time.sleep(2)
         data[friends[i]]["ratingHistory"] = []
         for j in rr:
             data[friends[i]]["ratingHistory"].append(

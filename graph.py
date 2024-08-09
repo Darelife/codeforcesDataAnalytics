@@ -14,7 +14,7 @@ with open("./output/json/algoX.json", "r") as f:
 data = {}
 
 # TODO: check if u want only friends or not, (same for algoOnly)
-friendsOnly = False
+friendsOnly = True
 algoOnly = True
 
 
@@ -53,6 +53,10 @@ def plot_graph(data):
     plt.xlabel("Timeee")
     plt.ylabel("Rating")
     plt.legend()
+    # increase the pixel size of the graph
+    fig = plt.gcf()
+    fig.set_size_inches(18.5, 10.5)
+    # plt.xticks(rotation=45)
     plt.savefig("ratingVsTime.png")
     plt.show()
 
